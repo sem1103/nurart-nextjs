@@ -1,0 +1,24 @@
+{
+  "name": "nurart-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.3",
+    "react-hook-form": "^7.51.4", 
+    "react-i18next": "^14.1.1",
+    "react-input-mask": "^2.0.4",
+    "react-int": "^0.3.3",
+    "react-intersection-observer": "^9.8.2",
+    "react-slick": "^0.30.2",
+    "zustand": "^4.5.2",
+    "zustand-devtools": "^1.1.0"
+  }
+}
