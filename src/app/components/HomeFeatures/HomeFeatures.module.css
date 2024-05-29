@@ -1,15 +1,15 @@
-.feature__item{
+.feature__item {
     width: calc((100% - clamp(10px, 3vw, 107px) * 2) / 3);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    & h3{
-        font: clamp(14px, 4vw, 24px) HelveticaL;
-        margin: 15px 0 0 0;
-    }
-    & img{
-        width: initial;
-        height: initial;
-    }
-}
+  }
+  .feature__item h3 {
+    font: clamp(14px, 4vw, 24px) HelveticaL;
+    margin: 15px 0 0 0;
+  }
+  .feature__item img {
+    width: initial;
+    height: initial;
+  }

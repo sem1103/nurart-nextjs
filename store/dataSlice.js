@@ -71,13 +71,20 @@ const useDataSlice = create(
                     useLoaderSlice.getState().changeLoader(true);
                     get().getFavoriteItems();
                     get().getCartItems();
-                    const data = await fetch(mainUrl).then(res => res.json());
-                    
-                    const items = await Promise.all(data[0].acf.items.map(async item => {
-                        item.boxImg = data[0].acf.boxImg;
+                    const data = await fetch(mainUrl, {
+                        method: 'GET', // Метод запроса
+                        headers: {
+                          'Content-Type': 'application/json', // Тип содержимого запроса
+                          'Access-Control-Allow-Origin': '*', // Разрешенные источники (здесь '*' разрешает любой источник)
+                          // Другие заголовки, если необходимо
+                        },
+                      }).then(res => res.json());
+                    console.log(data);
+                    const items = await Promise.all(data.acf.items.map(async item => {
+                        item.boxImg = data.acf.boxImg;
                         return item;
                     }));
-                    const paintItem = data[0].acf.paint ? await Promise.all(data[0].acf.paint.map(async item => {
+                    const paintItem = data.acf.paint ? await Promise.all(data.acf.paint.map(async item => {
                         return item;
                     })) : [];
 

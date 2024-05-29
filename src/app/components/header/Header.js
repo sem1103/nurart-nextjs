@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import s from './Header.module.css'
-import {  useRef, useState } from "react";
+import {  useEffect, useRef, useState } from "react";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import PutRequestForm from "../OrderForm/PutRequestForm";
@@ -15,11 +15,11 @@ export default function Header(){
     let { t } = useTranslation();
 
     const changeLang = () => {
-        console.log(i18n);
 
         i18next.language == 'az' ? i18n.changeLanguage('ru') : i18n.changeLanguage('az')
     };
     const productNav = useRef(null);
+    const inputLang = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
 
     const burgerMenuHandler = () =>{
@@ -30,6 +30,9 @@ export default function Header(){
     }
 
    
+    useEffect(() => {
+        inputLang.current.checked = i18next.language == 'ru' ? true : false;
+    } , [])
 
     const openRequestModal = () =>{
         document.body.classList.add('show__order');
@@ -113,7 +116,7 @@ export default function Header(){
                                 <span className={i18next.language == 'az' ? s.active__lang : ''} >AZ</span>
 
                                 <label onClick={() => changeLang()} className={s.toggle} for="check">
-                                    <input  checked={i18next.language == 'ru'} id={s.check} name="check" type="checkbox" />
+                                    <input ref={inputLang} id={s.check} name="check" type="checkbox" />
                                     <div className={s.toggle__circle}></div>
                                 </label>
                                 <span className={i18next.language == 'ru' ? s.active__lang : ''}>RU</span>

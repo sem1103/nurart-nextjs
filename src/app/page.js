@@ -162,7 +162,6 @@ const feedbacks = [
 
   return (
     <>
-    assd
        <HomeSlider urls={campaignSlides}  />
             <section className={`${s.features} mini__container`}>
                 {

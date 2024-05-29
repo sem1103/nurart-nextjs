@@ -1,119 +1,108 @@
-
-.menu{
+.menu {
     will-change: transform, box-shadow;
-    & a{
-        padding: 6px 0;
-    } 
 }
-.right{
+.menu a {
+    padding: 6px 0;
+}
+.right {
     flex: 1;
 }
-
 .logo {
     margin: 0 30px 0 0;
 }
-.right nav{
+.right nav {
     margin: 0 auto 0 0;
 }
 .header__tools li {
     margin: 0 26px 0 0;
 }
-
 .right ul,
-.menu{
+.menu {
     display: flex;
     align-items: center;
-  }
-  .menu li{
+}
+.menu li {
     font: 16px 'HelveticaR';
     color: #fff;
     cursor: pointer;
     transition: all .3s ease-in-out;
-    padding:  10px 0;
-    &:hover {
-        color: #b31313;
-        text-shadow: 0 0 10px var(--red);
-    }
-  }
-
-.submenu{
-    position: relative;
-    & ul{
-        position: absolute;
-        top: 100%;
-        max-height: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        background: var(--gray);
-        padding: 0;
-        width: max-content;
-        border-radius: 10px;
-        transition: all .3s ease-in-out;
-        overflow: hidden;
-        & li{
-            margin: 0 0 6px 0;
-            padding: 0;
-            &:last-child{
-                margin: 0;
-            }
-        }
-    }
-    &:hover ul{
-        max-height: 200px;
-        padding: 14px 11px;
-        box-shadow: 0 0 5px 2px #7f7f7f ;
-
-
-    }
+    padding: 10px 0;
 }
-
+.menu li:hover {
+    color: #b31313;
+    text-shadow: 0 0 10px var(--red);
+}
+.submenu {
+    position: relative;
+}
+.submenu ul {
+    position: absolute;
+    top: 100%;
+    max-height: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background: var(--gray);
+    padding: 0;
+    width: max-content;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+}
+.submenu ul li {
+    margin: 0 0 6px 0;
+    padding: 0;
+}
+.submenu ul li:last-child {
+    margin: 0;
+}
+.submenu:hover ul {
+    max-height: 200px;
+    padding: 14px 11px;
+    box-shadow: 0 0 5px 2px #7f7f7f;
+}
 .header__tools li:last-child {
     margin: 0 20px 0 0;
 }
-
 .header__tools {
     border-right: 2px solid var(--red);
     padding: 4px 0;
     margin: 0 20px 0 0;
 }
-
-
-.header__tools {
-    & li{
-        padding: 0;
-    }
-    & a , & button{
-        display: flex;
-        align-items: center;
-        font: 14px 'HelveticaR';
-        color: #fff;
-        padding: 6px 14px;
-        background: var(--red);
-        border-radius: 50px;
-        box-shadow: 0 4px 4px #00000024;
-        transition: all .3s ease-in-out;
-    
-        & svg {
-            margin: 0 5px 0 0;
-        }
-    
-        &:hover path, &.active path {
-            fill: #fff
-        }
-    
-        &:hover, &.active {
-            background: var(--lightRed);
-        }
-    }
+.header__tools li {
+    padding: 0;
 }
-
-
-
+.header__tools a,
+.header__tools button {
+    display: flex;
+    align-items: center;
+    font: 14px 'HelveticaR';
+    color: #fff;
+    padding: 6px 14px;
+    background: var(--red);
+    border-radius: 50px;
+    box-shadow: 0 4px 4px #00000024;
+    transition: all .3s ease-in-out;
+}
+.header__tools a svg,
+.header__tools button svg {
+    margin: 0 5px 0 0;
+}
+.header__tools a:hover path,
+.header__tools button:hover path,
+.header__tools a.active path,
+.header__tools button.active path {
+    fill: #fff;
+}
+.header__tools a:hover,
+.header__tools button:hover,
+.header__tools a.active,
+.header__tools button.active {
+    background: var(--lightRed);
+}
 .toggle__container {
-   
     color: hsl(0, 0%, 30%);
     font-weight: 900;
     font-size: 14px;
@@ -121,18 +110,16 @@
     font-family: HelveticaR;
     align-items: center;
     color: #c8c8c8;
-    & span{
-        transition: all .3s ease-in-out;
-    }
-  }
-
-  .active__lang{
+}
+.toggle__container span {
+    transition: all .3s ease-in-out;
+}
+.active__lang {
     color: var(--lightRed);
-  }
-  
+}
 .toggle {
     width: 40px;
-    height: 20PX;
+    height: 20px;
     background-color: hsl(0, 0%, 80%);
     border-radius: 1.7rem;
     padding: 5px 0;
@@ -142,7 +129,6 @@
     justify-content: center;
     transition: background-color 300ms 300ms;
 }
-  
 .toggle__circle {
     width: 10px;
     height: 10px;
@@ -152,18 +138,15 @@
     transition: margin 500ms ease-in-out;
     opacity: .6;
 }
-  
-
-  
- #check:checked  + .toggle__circle {
+#check:checked + .toggle__circle {
     margin-right: 0;
     margin-left: 15px;
 }
-.toggle{
+.toggle {
     position: relative;
     overflow: hidden;
 }
-#check{
+#check {
     opacity: 0;
     position: absolute;
     top: 0;
@@ -172,13 +155,9 @@
     height: 100%;
     cursor: pointer;
 }
-  
-  
-
-.burger{
+.burger {
     display: none;
 }
-
 .burger__btn {
     width: 30px;
     height: 30px;
@@ -186,7 +165,6 @@
     cursor: pointer;
     overflow: hidden;
 }
-
 .stick {
     width: 30px;
     box-sizing: border-box;
@@ -201,7 +179,6 @@
     margin: 0;
     transform-origin: center center;
 }
-
 .active__burger .stick:first-child {
     animation-name: firstStick;
     animation-delay: 1.2s;
@@ -210,12 +187,10 @@
     animation-fill-mode: both;
     top: 0;
 }
-
 .stick:nth-child(2) {
     top: 50%;
     transform: translate(0, -50%);
 }
-
 .stick:last-child {
     bottom: 0;
     top: initial;
@@ -224,11 +199,7 @@
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
 }
-
-
-
-
-.active__burger .stick:nth-child(2){
+.active__burger .stick:nth-child(2) {
     width: 3px;
     transition: width .4s ease-in-out;
     animation-name: ball;
@@ -237,111 +208,93 @@
     animation-timing-function: ease-in-out;
     animation-delay: .4s;
 }
-
-.active__burger .stick:last-child{
+.active__burger .stick:last-child {
     animation-name: lastStick;
 }
-
-
-.deactive__burger  .stick:first-child{
+.deactive__burger .stick:first-child {
     animation-name: deactiveOne;
     animation-delay: 0ms;
     animation-duration: 500ms;
 }
-.deactive__burger  .stick:last-child{
+.deactive__burger .stick:last-child {
     animation-name: deactiveTwo;
     animation-delay: 0ms;
     animation-duration: 500ms;
 }
-
 @keyframes deactiveOne {
-    0%{
+    0% {
         top: 50%;
         transform: rotate(-45deg) translateY(-50%);
     }
-    100%{
+    100% {
         top: 0;
         transform: rotate(0) translateY(0);
     }
 }
-
 @keyframes deactiveTwo {
-    0%{
+    0% {
         bottom: 50%;
         transform: rotate(45deg) translateY(50%);
     }
-    100%{
+    100% {
         bottom: 0;
         transform: rotate(0) translateY(0);
     }
 }
-
-
-
 @keyframes ball {
-    0%{
+    0% {
         top: 50%;
     }
-    20%{
+    20% {
         top: 100%;
     }
-    50%{
+    50% {
         top: 0;
     }
-    100%{
+    100% {
         top: 110%;
     }
 }
-
 @keyframes firstStick {
-    0%{
-        top:  0;
+    0% {
+        top: 0;
     }
-    20%{
+    20% {
         top: 50%;
     }
-    50%{
+    50% {
         transform: rotate(-56deg) translateY(-50%);
     }
-    80%{
+    80% {
         transform: rotate(-36deg) translateY(-50%);
     }
-  
-
-    100%{
+    100% {
         top: 50%;
         transform: rotate(-45deg) translateY(-50%);
         box-shadow: 0 0 3px 1px var(--red);
     }
 }
-
 @keyframes lastStick {
-    0%{
+    0% {
         bottom: 0;
     }
-    20%{
+    20% {
         bottom: 50%;
     }
-    50%{
+    50% {
         transform: rotate(56deg) translateY(50%);
     }
-    80%{
+    80% {
         transform: rotate(36deg) translateY(50%);
     }
-
-    100%{
+    100% {
         bottom: 50%;
-        transform: rotate(45deg) translateY(50%) ;
+        transform: rotate(45deg) translateY(50%);
         box-shadow: 0 0 3px 1px var(--red);
-
     }
 }
-
-
-
 @media only screen and (max-width: 1000px) {
-  
-    .burger{
+    .burger {
         display: block;
         position: absolute;
         right: 20px;
@@ -349,21 +302,20 @@
         transform: translateY(-50%);
         z-index: 5;
     }
-    .right{
+    .right {
         position: absolute;
         width: 100%;
     }
-    .logo{
+    .logo {
         margin: 0;
-        & a{
-            font-size: 46px;
-        }
     }
-  
-    .active__burger{
+    .logo a {
+        font-size: 46px;
+    }
+    .active__burger {
         overflow: hidden;
     }
-    .menu{
+    .menu {
         width: 100%;
         left: 0;
         top: 0;
@@ -371,7 +323,7 @@
         opacity: 0;
         position: fixed;
         flex-direction: column;
-        transition: .2s opacity .2s ease-in-out, .3s trasnform .2s ease-in-out;
+        transition: .2s opacity .2s ease-in-out, .3s transform .2s ease-in-out;
         background: #303030a2;
         height: 100%;
         align-items: start;
@@ -380,48 +332,44 @@
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         overflow: auto;
-        & nav{
-            margin: 0;
-            & ul{
-                flex-direction: column;
-                align-items: start;
-            }
-            & li{
-                margin: 0;
-            }
-        }
     }
-    .active__burger .menu{
+    .menu nav {
+        margin: 0;
+    }
+    .menu nav ul {
+        flex-direction: column;
+        align-items: start;
+    }
+    .menu nav li {
+        margin: 0;
+    }
+    .active__burger .menu {
         opacity: 1;
         z-index: 1;
         box-shadow: 0 0 10px 4px var(--gray);
         transform: translateX(0);
     }
-
-    ul.header__tools{
+    ul.header__tools {
         flex-direction: column;
-        border:0 ;
+        border: 0;
         align-items: start;
         margin: 0 0 30px 0;
-        & li{
-            margin: 0 0 15px 0 ;
-        }
-        & li:last-child{
-            margin: 0;
-        }
     }
-
-    
-.submenu{
-    position: relative;
-    & ul{
+    ul.header__tools li {
+        margin: 0 0 15px 0;
+    }
+    ul.header__tools li:last-child {
+        margin: 0;
+    }
+    .submenu {
+        position: relative;
+    }
+    .submenu ul {
         position: static;
         background: none;
     }
-    &:hover ul{
+    .submenu:hover ul {
         max-height: 500px;
-        box-shadow: none ;
+        box-shadow: none;
     }
-}
-    
 }

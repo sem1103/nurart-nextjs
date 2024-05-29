@@ -1,4 +1,4 @@
-.feedback{
+.feedback {
     margin: 0 auto;
     height: 100%;
     overflow: hidden;
@@ -7,51 +7,49 @@
     box-shadow: 0 5px 10px #00000020;
     display: flex;
     flex-direction: column;
-    & img{
-        max-width: 80px;
-        border-radius: 50%;
-    }
-    & h5{
-        font: clamp(14px, 3vw, 28px) HelveticaB;
-        color: #fff;
-    }
-
-    & p,& svg,& img, & h5{
-        transition: all .5s ease-in-out;
-    }
-}
-.feedback__top{
-    background: linear-gradient(90deg, rgba(59,0,0,1) 0%, rgba(221,0,0,1) 100%);
-    padding: clamp(23px, 3vw, 52px) clamp(23px, 3vw, 52px) clamp(15px, 3vw, 34px) clamp(23px, 3vw, 52px) ;
+  }
+  .feedback img {
+    max-width: 80px;
+    border-radius: 50%;
+  }
+  .feedback h5 {
+    font: clamp(14px, 3vw, 28px) HelveticaB;
+    color: #fff;
+  }
+  .feedback p, .feedback svg, .feedback img, .feedback h5 {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .feedback__top {
+    background: linear-gradient(90deg, #3b0000 0%, #dd0000 100%);
+    padding: clamp(23px, 3vw, 52px) clamp(23px, 3vw, 52px) clamp(15px, 3vw, 34px) clamp(23px, 3vw, 52px);
     display: flex;
     align-items: center;
     gap: 10px;
-
-}
-.feedback__content{
-    padding: clamp(20px, 3vw, 42px) clamp(22px, 3vw, 64px) ;
+  }
+  
+  .feedback__content {
+    padding: clamp(20px, 3vw, 42px) clamp(22px, 3vw, 64px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-    & p{
-        font: clamp(12px, 3vw, 18px) UrbanistBs;
-        color: #666;
-        padding: 0 15px;
-    }
-
-    
-}
-
-.raiting{
+  }
+  .feedback__content p {
+    font: clamp(12px, 3vw, 18px) UrbanistBs;
+    color: #666;
+    padding: 0 15px;
+  }
+  
+  .raiting {
     display: flex;
     padding: 0 15px;
     margin: clamp(18px, 3vw, 40px) 0 0 0;
-    & > div{
-        margin: 0 10px 0 0;
-    }
-}
-.fill path{
+  }
+  .raiting > div {
+    margin: 0 10px 0 0;
+  }
+  
+  .fill path {
     fill: red;
-}
-
+  }
