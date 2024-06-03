@@ -7,15 +7,13 @@ export default createMiddleware({
   defaultLocale: 'az',
   pathnames : {
     '/prod/polygraphy': {
-      az: '/poliqrafiyalar',
-      ru: '/poliqrafii'
+      az: '/az/poliqrafiyalar',
+      ru: '/ru/prod/polygraphy'
     }
   }
 });
  
 export const config = {
-  matcher: [
-    '/((?!api|_next|_vercel|.*\\..*).*)',
-    '/([\\w-]+)?/users/(.+)'
-  ]
+  // Match only internationalized pathnames
+  matcher: ['/', '/(az|ru)/:path*']
 };

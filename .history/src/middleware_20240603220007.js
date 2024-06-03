@@ -8,14 +8,16 @@ export default createMiddleware({
   pathnames : {
     '/prod/polygraphy': {
       az: '/poliqrafiyalar',
-      ru: '/poliqrafii'
+      ru: '/prod/polygraphy'
     }
   }
 });
  
 export const config = {
+  // Match only internationalized pathnames
   matcher: [
     '/((?!api|_next|_vercel|.*\\..*).*)',
+    // However, match all pathnames within `/users`, optionally with a locale prefix
     '/([\\w-]+)?/users/(.+)'
   ]
 };
