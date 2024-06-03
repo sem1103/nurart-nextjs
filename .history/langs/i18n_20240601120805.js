@@ -1,0 +1,33 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+import az from './az.json'
+import ru from './ru.json'
+import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
+console.log(I18nextBrowserLanguageDetecto);
+
+i18n
+  // detect user language
+  // learn more: https://github.com/i18next/i18next-browser-languageDetector
+  .use(I18nextBrowserLanguageDetector)
+  // pass the i18n instance to react-i18next.
+  .use(initReactI18next)
+  // init i18next
+  // for all options read: https://www.i18next.com/overview/configuration-options
+  .init({
+    debug: true,
+    fallbackLng: 'az',
+    interpolation: {
+      escapeValue: false, // not needed for react as it escapes by default
+    },
+    resources: {
+      az: {
+        translation: az
+      }, 
+      ru: {
+        translation: ru
+      }
+    }
+  });
+
+export default i18n;

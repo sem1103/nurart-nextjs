@@ -1,0 +1,22 @@
+
+.slider__item{
+    padding: 25px 25px 0 25px;
+   
+}
+.slider__item img{
+    height: 80vh;
+    width: initial;
+    border-radius: 15px;
+}
+
+
+@media only screen and (width < 1000px) {
+    .slider__item img{
+        height: 100%;
+        width: 100%;
+    
+    }
+    .slider__item{
+        padding: 25px 10px 0 10px ;
+    }
+}

@@ -1,0 +1,26 @@
+import { useRouter } from 'next/navigation';
+
+const LanguageSwitcher = () => {
+  const router = useRouter();
+
+  const changeLanguage = (lang) => {
+    if (!router) {
+      console.error('NextRouter was not mounted');
+      return;
+    }
+
+    const currentPath = router.asPath;
+    const basePath = router;
+    const newPath = currentPath.replace(basePath, `/${lang}`);
+    router.push(newPath);
+  };
+
+  return (
+    <div>
+      <button onClick={() => changeLanguage('az')}>AZ</button>
+      <button onClick={() => changeLanguage('ru')}>Ru</button>
+    </div>
+  );
+};
+
+export default LanguageSwitcher;
