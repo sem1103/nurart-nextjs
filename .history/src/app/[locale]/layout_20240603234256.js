@@ -1,7 +1,8 @@
 import { NextIntlClientProvider } from "next-intl";
+import Header from "./components/header/Header";
 import {getMessages} from 'next-intl/server';
 import "./globals.css";
-import Header from "@/components/header/Header";
+import FilterCategory from "./prod/FilterCategory";
 
 
 export const metadata = {

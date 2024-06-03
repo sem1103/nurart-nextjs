@@ -1,7 +1,8 @@
 import { NextIntlClientProvider } from "next-intl";
+import Header from "./components/header/Header";
 import {getMessages} from 'next-intl/server';
 import "./globals.css";
-import Header from "@/components/header/Header";
+import FilterCategory from "./prod/FilterCategory";
 
 
 export const metadata = {
@@ -15,14 +16,14 @@ export const metadata = {
 export default async  function RootLayout({ children, params: { locale } }) {
 
   const messages = await getMessages();
-  
+
   return (
     <html lang={locale}>
       <body>
       <NextIntlClientProvider  messages={messages}>
 
           <Header  />
-     
+          <FilterCategory />
           <main>
             {children}
           </main>

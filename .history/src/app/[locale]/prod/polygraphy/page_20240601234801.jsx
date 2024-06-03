@@ -4,17 +4,16 @@ import s from './../ProductsPage.module.css';
 import FilterCategory from '../FilterCategory';
 import React, { useRef, useState } from 'react';
 import { useEffect } from 'react';
-import SimpleProd from '@/components/ProductItems/SimpleProd';
+import SimpleProd from '../../components/ProductItems/SimpleProd';
 
-import Loader from '@/components/Loader/Loader';
+import Loader from '../../components/Loader/Loader';
 import useDebounce from '../../../../../hooks/useDebounce';
-import OrderForm from '@/components/OrderForm/OrderForm';
-import ThanksModal from '@/components/ThanksModal/ThanksModal';
+import OrderForm from '../../components/OrderForm/OrderForm';
+import ThanksModal from '../../components/ThanksModal/ThanksModal';
 import {useTranslations} from 'next-intl';
 import useDataSlice from '../../../../../store/dataSlice';
-import Contact from '@/components/Contact/Contact';
+import Contact from '../../components/Contact/Contact';
 import useLoaderSlice from '../../../../../store/loaderSlice';
-import { useSelectedLayoutSegments } from 'next/navigation';
 
 
 
@@ -30,8 +29,7 @@ export default function Polygraphy() {
     const { items, allItems, filters, fetchData, filterByCategory, filterByName, resetItems, setActiveCategoryLabel } = useDataSlice();
     const { loader } = useLoaderSlice();
     const [isOpen, setIsOpen] = useState(false);
-    const [orderName, setOrderName] = useState('');
-
+    const [orderName, setOrderName] = useState('')
 
     useEffect(() => {
         resetItems();

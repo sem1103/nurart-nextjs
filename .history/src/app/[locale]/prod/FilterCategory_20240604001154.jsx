@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import s from './ProductsPage.module.css';
 import Link from 'next/link';
 import useDataSlice from '../../../../store/dataSlice';
+import { usePathname } from 'next/navigation';
 import {useLocale, useTranslations} from 'next-intl';
 
 

@@ -4,7 +4,7 @@ export default createMiddleware({
   // A list of all locales that are supported
   locales: ['az', 'ru'],
   // Used when no locale matches
-  defaultLocale: 'az',
+  defaultLocale: 'ru',
   pathnames : {
     '/' : '/',
     '/prod/polygraphy': {
@@ -17,7 +17,7 @@ export default createMiddleware({
 export const config = {
   matcher: [
     '/',
-    '/(az|ru)/:path*',
-    '/((?!api|_next|_vercel|.*\\..*).*)'
+    '/((?!api|_next|_vercel|.*\\..*).*)',
+    '/([\\w-]+)?/users/(.+)'
   ]
 };

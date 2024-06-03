@@ -2,21 +2,25 @@
 'use client'
 import { useEffect, useRef, useState } from 'react';
 import s from './ProductsPage.module.css';
+
 import Link from 'next/link';
 import useDataSlice from '../../../../store/dataSlice';
+import { usePathname, useSelectedLayoutSegments } from 'next/navigation';
 import {useLocale, useTranslations} from 'next-intl';
 
 
 export default function FilterCategory(props) {
-    const {searchInput, setInputValue, activeCategoryLabel, segments} = useDataSlice();
+    const {searchInput, setInputValue, activeCategoryLabel} = useDataSlice();
 
     let lang = useLocale();
     
     let [openFilter, setOpenFilter] = useState(false);
     const t = useTranslations();
     const filterElem = useRef();
-
+    const routePath = usePathname();
+    const segments = useSelectedLayoutSegments()
     console.log(segments);
+
     useEffect(() => {
         const handleClickOutside = event => {
           if (filterElem.current && !filterElem.current.contains(event.target)) {

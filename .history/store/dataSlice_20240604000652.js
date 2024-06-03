@@ -12,7 +12,7 @@ import i18next from 'i18next';
 const useDataSlice = create(
     devtools(
         (set, get) => ({
-            segments: '',
+            segments: '';
             imagesLoaded: false,
             campaignSlides: [],
             promotionItems: [],
@@ -42,9 +42,6 @@ const useDataSlice = create(
             activeCategoryLabel: '',
             favoriteItems: [],
             cartItems: [],
-            setSegment: (segment) => {
-                set(() => ({segments : segment}))
-            },
             setOnloadImg: (state) => {
                 set(() => ({ imagesLoaded: state }))
             },

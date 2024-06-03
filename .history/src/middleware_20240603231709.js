@@ -4,7 +4,7 @@ export default createMiddleware({
   // A list of all locales that are supported
   locales: ['az', 'ru'],
   // Used when no locale matches
-  defaultLocale: 'az',
+  defaultLocale: 'ru',
   pathnames : {
     '/' : '/',
     '/prod/polygraphy': {

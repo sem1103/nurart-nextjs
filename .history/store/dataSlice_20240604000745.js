@@ -44,7 +44,7 @@ const useDataSlice = create(
             cartItems: [],
             setSegment: (segment) => {
                 set(() => ({segments : segment}))
-            },
+            }
             setOnloadImg: (state) => {
                 set(() => ({ imagesLoaded: state }))
             },

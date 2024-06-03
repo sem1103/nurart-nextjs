@@ -2,12 +2,12 @@
 import useDataSlice from "/store/dataSlice";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import CartSlider from "@/components/CartSlider/CartSlider";
-import HomeSlider from "@/components/HomeSlider/HomeSlider";
-import Counter from "@/components/Counter/Counter";
-import HomeFeatures from "@/components/HomeFeatures/HomeFeatures";
+import CartSlider from "./components/CartSlider/CartSlider";
+import HomeSlider from "./components/HomeSlider/HomeSlider";
+import Counter from "./components/Counter/Counter";
+import HomeFeatures from "./components/HomeFeatures/HomeFeatures";
 import s from './page.module.css'
-import FeedbackSlider from "@/components/Feedback/FeedbackSlider";
+import FeedbackSlider from "./components/Feedback/FeedbackSlider";
 import {useTranslations} from 'next-intl';
 
 

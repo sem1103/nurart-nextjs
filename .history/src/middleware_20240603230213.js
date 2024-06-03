@@ -6,7 +6,7 @@ export default createMiddleware({
   // Used when no locale matches
   defaultLocale: 'az',
   pathnames : {
-    '/' : '/',
+    // '/' : '/',
     '/prod/polygraphy': {
       az: '/poliqrafiyalar',
       ru: '/poliqrafii'

@@ -6,7 +6,7 @@ export default createMiddleware({
   // Used when no locale matches
   defaultLocale: 'az',
   pathnames : {
-    '/' : '/',
+    // '/' : '/',
     '/prod/polygraphy': {
       az: '/poliqrafiyalar',
       ru: '/poliqrafii'
@@ -17,7 +17,7 @@ export default createMiddleware({
 export const config = {
   matcher: [
     '/',
-    '/(az|ru)/:path*',
+    '/(az)/:path*',
     '/((?!api|_next|_vercel|.*\\..*).*)'
   ]
 };
