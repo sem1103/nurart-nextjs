@@ -3,4 +3,6 @@ login: hasanoi1
 pass: yRMRPWxBPMNG
 
 
-109.127.1.29
+https://api.nurart.az/wp-admin/
+admin
+zxcv1234zxcv1234

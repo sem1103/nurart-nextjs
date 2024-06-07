@@ -1,0 +1,5 @@
+.mainTitle {
+    font: clamp(26px, 10vw, 44px) HelveticaB;
+    text-align: center;
+    margin: clamp(20px, 5vw, 46px) auto 0 auto;
+}

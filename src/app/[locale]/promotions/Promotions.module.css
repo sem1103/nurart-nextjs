@@ -1,0 +1,37 @@
+.container {
+    margin: clamp(20px, 5vw, 46px) auto 0 auto;
+
+    & h1 {
+        font: clamp(26px, 10vw, 44px) HelveticaB;
+        text-align: center;
+    }
+}
+
+.promotions__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 25px;
+    margin: clamp(15px, 5vw, 36px) auto 0 auto;
+    & .promotion__item{
+        width: calc((100% - 75px) / 4);
+        
+    }
+}
+
+@media only screen and (width < 600px) {
+    .promotions__wrapper .promotion__item{
+        width: calc((100% - 25px) / 2);
+    }
+}
+
+@media only screen and (width < 480px) {
+    .promotions__wrapper .promotion__item{
+        width: 100%;
+        max-height: 300px;
+        text-align: center;
+        & img{
+            width: initial;
+        
+        }
+    }
+}
