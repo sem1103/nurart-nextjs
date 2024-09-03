@@ -14,7 +14,7 @@ export function generateMetadata({ params }) {
         siteName: 'NurArt.az',
         images: [
           {
-            url: '/assets/img/logo.png',
+            url: '/assets/img/logo.png'
           }
         ],
         locale: 'ru',

@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.notFound__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font: 18px Arial;
+    position: relative;
+    overflow: hidden;
+}
+
+.notFound__wrapper a{
+    color: #303030;
+    text-decoration: none;
+    font: 18px Arial;
+}
+.notFound__wrapper video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.notFound{
+    padding: 45px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
