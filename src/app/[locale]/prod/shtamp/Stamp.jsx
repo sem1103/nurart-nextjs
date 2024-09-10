@@ -48,7 +48,9 @@ export default function Stamp() {
 
 
     useEffect(() => {
-        setVisibleProducts(items.shtamp.slice(0, loadedCount));
+        let array = items.shtamp.sort((a,b) => +a.productName > +b.productName ? -1 : 1);
+        
+        setVisibleProducts(array.slice(0, loadedCount));
       }, [loadedCount, items.shtamp]);
 
 
@@ -86,6 +88,7 @@ export default function Stamp() {
                         loader && !allItems.shtamp.length ? <Loader />
                             :
                             visibleProducts.map(item => {
+                                
                                 return <ComplexItem item={item} orderModalHandler={openOrderModal}/>
                             })
                     }
