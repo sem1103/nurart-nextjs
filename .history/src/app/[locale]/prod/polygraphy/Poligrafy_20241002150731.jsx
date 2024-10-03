@@ -92,9 +92,7 @@ export default function Polygraphy() {
                         visibleProducts.map(item => {
                             console.log(item.categories[0]);
                             
-                            return (
-                                    <SimpleProd item={item} openOrderModal={openOrderModal} filterCategory={filterCategory} />
-                            )
+                            return <SimpleProd item={item} openOrderModal={openOrderModal} />
                         })
                     }
                     {

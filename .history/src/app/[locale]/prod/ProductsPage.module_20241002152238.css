@@ -153,6 +153,7 @@
     top: 25px;
     transition: all 0.3s ease-in-out;
     border-radius: 50%;
+    position: relative;
     z-index: 9;
   }
   .carts__wrapper h3 {
@@ -343,6 +344,8 @@
     .stamp__carts button.favorite__add {
       right: 5px;
       top: 80px;
+      position: relative;
+    z-index: 9;
     }
   }
   @media only screen and (width < 560px) {

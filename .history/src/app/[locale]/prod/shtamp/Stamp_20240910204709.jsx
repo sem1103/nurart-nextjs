@@ -89,7 +89,7 @@ export default function Stamp() {
                             :
                             visibleProducts.map(item => {
                                 
-                                return <ComplexItem item={item} orderModalHandler={openOrderModal} filterCategory={filterCategory}/>
+                                return <ComplexItem item={item} orderModalHandler={openOrderModal}/>
                             })
                     }
 

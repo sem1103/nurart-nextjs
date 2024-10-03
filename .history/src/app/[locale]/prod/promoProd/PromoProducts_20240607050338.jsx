@@ -1,8 +1,8 @@
+
 'use client'
-import Contact from '@/components/Contact/Contact'
+import Contact from '@/components/Contact/Contact';
 import s from './../ProductsPage.module.css'
 import FilterCategory from '../FilterCategory'
-import { useTranslations } from 'next-intl';
 import  { useState, useEffect, useRef } from 'react';
 import useLoaderSlice from '../../../../../store/loaderSlice';
 import useDebounce from '../../../../../hooks/useDebounce';
@@ -11,12 +11,14 @@ import Loader from '@/components/Loader/Loader';
 import SimpleProd from '@/components/ProductItems/SimpleProd';
 import OrderForm from '@/components/OrderForm/OrderForm';
 import ThanksModal from '@/components/ThanksModal/ThanksModal';
+import {  useTranslations } from 'next-intl';
 
 
 
 
-export default function VinilProducts() {
+export default function PromoProducts() {
     const t  = useTranslations();
+    
 
     const {items, allItems, filters, fetchData, filterByCategory, filterByName, resetItems,setActiveCategoryLabel} = useDataSlice()
     const {loader} = useLoaderSlice();
@@ -30,7 +32,7 @@ export default function VinilProducts() {
     useEffect(() => {
         resetItems();
         setActiveCategoryLabel('');
-        !allItems.vinil.length && fetchData('https://api.nurart.az/wp-json/wp/v2/vinil_items/');        
+        !allItems.promo.length && fetchData('https://api.nurart.az/wp-json/wp/v2/promo_products/');        
         const handleScroll = () => {
             const { clientHeight } = containerRef.current;
             if (window.scrollY > clientHeight  / 2) {
@@ -47,18 +49,18 @@ export default function VinilProducts() {
 
 
     useEffect(() => {
-        setVisibleProducts(items.vinil.slice(0, loadedCount));
-      }, [loadedCount, items.vinil]);
+        setVisibleProducts(items.promo.slice(0, loadedCount));
+      }, [loadedCount, items.promo]);
 
 
    
 
     const searchByName =  useDebounce(value => {
-            filterByName(value, 'vinil');
+            filterByName(value, 'promo');
         }, 700);
 
     const filterCategory = (category, label) => {
-        filterByCategory(category, 'vinil', label);
+        filterByCategory(category, 'promo', label);
     }
 
     const openOrderModal = (itemName) =>{
@@ -70,22 +72,23 @@ export default function VinilProducts() {
     return (
 
         <>
-           
+            
+
             <ThanksModal modalTitle={t('orderModalTitle')} modalText={t('orderModalText')} />
 
 
-            <div className={`container ${s.products__page}`} ref={containerRef}>
+            <div className={`container ${s.products__page}`}>
                 <h1>{t('productPageTitle')}</h1>
-                <FilterCategory filterCategories={filters.vinil} filterByCategory={filterCategory} filterByName={searchByName} placeholder={t('searchByName')} />
+                <FilterCategory filterCategories={filters.promo} filterByCategory={filterCategory} filterByName={searchByName} placeholder={t('searchByName')} />
 
-                <div className={`${s.carts} ${s.carts__wrapper}`}>
-                     { loader &&  !allItems.vinil.length ? <Loader /> : 
+                <div className={`${s.carts} ${s.carts__wrapper}`} ref={containerRef}>
+                     { loader && !allItems.promo.length ? <Loader /> : 
                         visibleProducts.map(item => {
-                          return <SimpleProd item={item} openOrderModal={openOrderModal} filterCategory={filterCategory}/>
+                          return  <SimpleProd item={item} openOrderModal={openOrderModal} />
                         })
                     } 
                     {
-                        (!items.vinil.length && !loader) && <h3>{t('notFound')}</h3>
+                        (!items.promo.length && !loader) && <h3>{t('notFound')}</h3>
                     }
                 </div>
 

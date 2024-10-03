@@ -94,6 +94,7 @@ export default function Polygraphy() {
                             
                             return (
                                     <SimpleProd item={item} openOrderModal={openOrderModal} filterCategory={filterCategory} />
+                                
                             )
                         })
                     }

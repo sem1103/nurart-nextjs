@@ -90,11 +90,9 @@ export default function Polygraphy() {
                 <div className={`${s.carts} ${s.carts__wrapper}`} ref={containerRef}>
                     {loader &&  !allItems.polygraphy.length ? <Loader /> :
                         visibleProducts.map(item => {
-                            console.log(item.categories[0]);
+                            console.log(item.categories);
                             
-                            return (
-                                    <SimpleProd item={item} openOrderModal={openOrderModal} filterCategory={filterCategory} />
-                            )
+                            return <SimpleProd item={item} openOrderModal={openOrderModal} />
                         })
                     }
                     {

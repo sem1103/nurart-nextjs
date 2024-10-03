@@ -15,12 +15,12 @@ export default function SimpleProd({item, openOrderModal, filterCategory}) {
     const itemName = useRef(null)
 
     return (
-        <div className={`${s.cart} ${s.simpleProd}`} >
-
-        <button onClick={(e) => {
+        <div className={`${s.cart} ${s.simpleProd}`} onClick={(e) => {
             e.stopPropagation();
-            filterCategory(item.categories[0].value, item.categories[0].label);
-        }} className={s.cartBtn} />
+            filterCategory(item.categories[0].value, item.categories[0].label)
+        }}>
+
+
             
             <button className={s.favorite__add} >
                

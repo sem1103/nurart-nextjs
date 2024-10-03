@@ -79,7 +79,7 @@ export default function VinilProducts() {
                 <FilterCategory filterCategories={filters.vinil} filterByCategory={filterCategory} filterByName={searchByName} placeholder={t('searchByName')} />
 
                 <div className={`${s.carts} ${s.carts__wrapper}`}>
-                     { loader &&  !allItems.vinil.length? <Loader /> : 
+                     { loader &&  !allItems.vinil.length ? <Loader /> : 
                         visibleProducts.map(item => {
                           return <SimpleProd item={item} openOrderModal={openOrderModal}/>
                         })

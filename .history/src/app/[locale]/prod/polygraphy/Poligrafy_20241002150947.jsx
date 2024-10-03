@@ -93,7 +93,9 @@ export default function Polygraphy() {
                             console.log(item.categories[0]);
                             
                             return (
-                                    <SimpleProd item={item} openOrderModal={openOrderModal} filterCategory={filterCategory} />
+                                <div>
+                                    <SimpleProd item={item} openOrderModal={openOrderModal} />
+                                </div>
                             )
                         })
                     }

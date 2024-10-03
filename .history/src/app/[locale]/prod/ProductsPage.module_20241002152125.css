@@ -153,7 +153,6 @@
     top: 25px;
     transition: all 0.3s ease-in-out;
     border-radius: 50%;
-    z-index: 9;
   }
   .carts__wrapper h3 {
     font: clamp(22px, 3vw, 26px) HelveticaB;
